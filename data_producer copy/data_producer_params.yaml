@@ -1,8 +1,0 @@
-save_dir: /home/aryalohia/PycharmProjects/Pseudo-Object-Motion-Sensitivity-in-Python-V1/simulated_data/data_6/input.mp4
-ref_save_dir: /home/aryalohia/PycharmProjects/Pseudo-Object-Motion-Sensitivity-in-Python-V1/simulated_data/data_6/input_REF.mp4
-height: 180
-width: 240
-frames: 600
-fps: 120
-col_width: 20
-object_radius: 25
