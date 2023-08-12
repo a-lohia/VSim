@@ -17,6 +17,8 @@ Clone this repository. Then run `pip install -r requirements.txt` to install.
 If you want to convert these videos to DVS, install v2e sim by cloning the 
 [v2e repository](https://github.com/SensorsINI/v2e) as well
 
+> **_NOTE_**: VSim requires ffmpeg to be installed on your system
+
 ## Instructions
 
 ### Parameters 
