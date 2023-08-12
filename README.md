@@ -38,6 +38,7 @@ If you want to convert these videos to DVS, install v2e sim by cloning the
 
 1. Add the parameters to the `test_data_params.yaml` file
     - `save_dir` is the path to where you want to save the test data
+    - `ref_save_dir` is the path to where you want to save the reference test data (for use as "ground truth" in the future)
     - `height` is the height of the test data (in pixels)
     - `width` is the width of the test data (in pixels)
     - `fps` is the frames per second of the test data
