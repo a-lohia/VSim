@@ -6,18 +6,6 @@ from tqdm import tqdm
 import skvideo.io
 
 
-# discreet path along circle of radius 10
-# all these extra numbers are for transformations that make the circle centered and line up and such
-#     path_indices = (
-#         np.rint(np.linspace(156, 356, 300)).astype(int),
-#         np.rint(np.sqrt(100**2 - (np.linspace(156, 356, 300) -256)**2) + 256).astype(int)
-#     )
-#     path_indices_2 = (
-#         np.rint(np.linspace(156, 356, 300)).astype(int),
-#         (-1 * np.rint(np.sqrt(100**2 - ((np.linspace(156, 356, 300)) -256)**2)).astype(int)) + 256
-#     )
-
-
 def create_moving_background(
         canvas: np.ndarray,
         fps: int,
@@ -121,8 +109,6 @@ def encode_to_video(canvas: np.ndarray, fps: int, output_dir: str) -> bool:
     Encode the frames to a video.
     :return: True if successful, False otherwise
     """
-
-    # skvideo.setFFmpegPath("~/opt/homebrew/Cellar/ffmpeg/6.0/bin/")
 
     try:
         writer = skvideo.io.FFmpegWriter(output_dir, inputdict={"-r": str(fps), '-pix_fmt': "gray"},
