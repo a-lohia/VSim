@@ -14,7 +14,8 @@ https://github.com/a-lohia/VSim/assets/96156566/22ff62f1-6dcd-4f0b-8776-85418b54
 ## Installation
 
 Clone this repository. Then run `pip install -r requirements.txt` to install. 
-If you want to convert these videos to v2e clone the [v2e repository](https://github.com/SensorsINI/v2e) as well
+If you want to convert these videos to DVS, install v2e sim by cloning the 
+[v2e repository](https://github.com/SensorsINI/v2e) as well
 
 ## Instructions
 
