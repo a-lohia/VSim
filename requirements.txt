@@ -3,3 +3,4 @@ numpy
 tqdm
 scikit-video
 pygame
+pyyaml

@@ -9,8 +9,6 @@ from data_producer.oms_data_producer import *
 from data_producer.path_producer import *
 import numpy as np
 import yaml
-import tkinter as tk
-from tkinter.filedialog import askopenfilename
 from pathlib import Path
 import skvideo.io
 
@@ -19,9 +17,6 @@ import skvideo.io
 # --- Params / Setup ----
 # -----------------------
 
-# tk.Tk().withdraw()  # part of the import if you are not using other tkinter functions
-# Ask for file (GUI)
-# fn = Path(askopenfilename())
 fn = Path(r"data_producer/data_producer_params.yaml")
 
 PARAMS_DIR = fn
