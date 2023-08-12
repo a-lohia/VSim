@@ -7,7 +7,12 @@ test with potential solutions for the ego-motion problem. Using VSim you can
 create videos of a square moving in a custom path created by your mouse on a 
 constantly moving background.
 
-![Sample](https://github.com/a-lohia/VSim/blob/main/sample_data/input.mp4)
+<div class="embed-responsive
+embed-responsive-16by9">
+
+<iframe src="sample_data/input.mp4" </iframe>
+
+</div>
 
 ## Installation
 
