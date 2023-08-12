@@ -7,6 +7,8 @@ test with potential solutions for the ego-motion problem. Using VSim you can
 create videos of a square moving in a custom path created by your mouse on a 
 constantly moving background.
 
+![](sample_data/input.mp4)
+
 ## Installation
 
 ## Instructions
@@ -16,8 +18,10 @@ constantly moving background.
 |    Parameter    |                        Description                        | Implemented |
 |:---------------:|:---------------------------------------------------------:|:-----------:|
 |   `save_dir`    |       Path to where you want to save the test data        |     Yes     |
+| `ref_save_dir`  |  Path to where you want to save the reference test data   |     Yes     |
 |    `height`     |            Height of the test data (in pixels)            |     Yes     |
 |     `width`     |            Width of the test data (in pixels)             |     Yes     |
+|    `frames`     |                     Number of frames                      |     Yes     |
 |      `fps`      |            Frames per second of the test data             |     Yes     |
 |   `col_width`   | Width of the columns in the moving background (in pixels) |     Yes     |
 | `object_radius` |          Radius of the moving object (in pixels)          |     Yes     |
