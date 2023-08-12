@@ -13,6 +13,8 @@ https://github.com/a-lohia/VSim/assets/96156566/22ff62f1-6dcd-4f0b-8776-85418b54
 
 ## Installation
 
+
+
 ## Instructions
 
 ### Parameters 
@@ -43,7 +45,7 @@ so you will have to manually create the path with your mouse)
 
 ## Credits
 
-
+Written by Arya Lohia for the IRIS project at [Parsa Research Lab at GMU](https://mason.gmu.edu/~mparsa/)
 
 ## License
 MIT License
