@@ -19,13 +19,14 @@ def create_moving_background(
     :return: modified canvas with moving background
     """
     frames, height, width = canvas.shape
-    # TODO: make sure that the shape should be width + frames (just a guess right now)
-    placeholder = np.zeros(shape=(width + frames, height, width), dtype=np.int32)
+    width_offset = 20
+    # width + width_offset is to let the weird column behavior happen outside the frame. We clip it out later
+    placeholder = np.zeros(shape=(width + frames, height, width + width_offset), dtype=np.int32)
 
     populated = False  # set to true when the first column reaches the other side
 
     counter = 0
-    # 512 is to account for the time for the first column to reach other side
+    # width + fps * seconds (frames) is to account for the time for the first column to reach other side
     for i in range(width + fps * seconds):
 
         # set counter to 0 every 16 frames
@@ -47,12 +48,13 @@ def create_moving_background(
             # cols.remove(height)
             cols = sorted(list(cols))
 
+            # iterate through cols
             # j is the column
             for j in range(len(cols)):
                 col = cols[j]
 
                 # erases from the tail end of the column
-                # if the column, 8 to the left of the current column, is also a white column, remove it
+                # if 8 to the left of the current column, is also a white column, remove it
                 if col - 7 in cols and col - 6 in cols:
                     placeholder[i, :, col - 7] = 0
 
@@ -60,7 +62,7 @@ def create_moving_background(
                 placeholder[i, :, col] = 255
 
                 # as long as the column is not the last one, add another column next to it
-                if col < width - 1:
+                if col < width + width_offset - 1:
                     placeholder[i, :, col + 1] = 255
                 else:
                     if not populated:
@@ -69,8 +71,7 @@ def create_moving_background(
 
         counter += 1
 
-    # TODO: Again, confirm that width is supposed to be here
-    canvas = placeholder[width:fps * seconds + width]
+    canvas = placeholder[width:fps * seconds + width, :, :width]
     return canvas
 
 
