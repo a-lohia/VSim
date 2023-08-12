@@ -9,6 +9,8 @@ constantly moving background.
 
 https://github.com/a-lohia/VSim/assets/96156566/e67944f1-5f7d-455b-870f-8d6913689d9a
 
+https://github.com/a-lohia/VSim/assets/96156566/22ff62f1-6dcd-4f0b-8776-85418b54da09
+
 ## Installation
 
 ## Instructions
