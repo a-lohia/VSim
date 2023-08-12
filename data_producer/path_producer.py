@@ -1,6 +1,5 @@
 __all__ = ["create_path", "manually_create_path"]
 
-import cv2
 import numpy as np
 import pygame
 import pygame.gfxdraw
