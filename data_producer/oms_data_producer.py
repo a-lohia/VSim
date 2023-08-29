@@ -76,14 +76,14 @@ def create_moving_background(
 
 
 def apply_object_to_path(
-        canvas: np.ndarray, path: tuple[np.ndarray, np.ndarray], object_radius: int, fill: bool = True,
+        canvas: np.ndarray, path: tuple[np.ndarray, np.ndarray], object_radius: int, fill=True,
 ) -> np.ndarray:
     """
     Apply the object to the path.
     :param canvas: 3d NumPy array of shape (frames, height, width)
     :param path: tuple of two 1d NumPy arrays of shape (frames,) representing the x and y coordinates of the object
     :param object_radius: radius/size of the object
-    :param fill: Optional whether to fill the object or not
+    :param fill: If True will fill the object, if an int between it becomes thickness of the outline in pixels
     :return: an updated canvas with the object applied along the path given
     """
     frames, height, width = canvas.shape

@@ -32,6 +32,7 @@ with open(PARAMS_DIR) as f:
     frames = params["frames"]
     col_width = params["col_width"]
     object_radius = params["object_radius"]
+    fill = params["fill"]  # either True or int
 
 seconds = np.ceil(frames / fps).astype(int)
 
@@ -48,7 +49,7 @@ x, y = manually_create_path(width, height, frames)
 canvas = create_moving_background(canvas, fps, seconds)
 
 canvas = apply_object_to_path(canvas, (x, y), object_radius)
-ref_canvas = apply_object_to_path(ref_canvas, (x, y), object_radius, fill=False)
+ref_canvas = apply_object_to_path(ref_canvas, (x, y), object_radius, fill=fill)
 
 
 # RENDER
