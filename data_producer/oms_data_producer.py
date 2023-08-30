@@ -87,9 +87,9 @@ def apply_object_to_path(
     :return: an updated canvas with the object applied along the path given
     """
     frames, height, width = canvas.shape
-    if fill:
+    if fill is True:
         mode = -1
-    elif fill is not None:
+    elif isinstance(fill, int) and fill > 0:
         mode = fill
     else:
         mode = None  # if you just want the outline of the object
