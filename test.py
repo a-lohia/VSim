@@ -1,3 +1,5 @@
+# Import create_data.create_data from data_producer/create_data.py to actually use this package.
+
 # This file is used to simulate differential motion. The user inputs a pathway using mouse input
 # and the program will generate a video of the pathway with a moving square that follows the path
 # and a constant moving background. The program will also generate a reference video of the same
@@ -5,7 +7,7 @@
 
 # go to data_producer folder to adjust the parameters of the produced video (size, length, etc...)
 
-from data_producer.oms_data_producer import *
+from data_producer.diff_data_producer import *
 from data_producer.path_producer import *
 import numpy as np
 import yaml

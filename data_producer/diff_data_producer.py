@@ -87,12 +87,9 @@ def apply_object_to_path(
     :return: an updated canvas with the object applied along the path given
     """
     frames, height, width = canvas.shape
-    if fill is True:
-        mode = -1
-    elif isinstance(fill, int) and fill > 0:
-        mode = fill
-    else:
-        mode = None  # if you just want the outline of the object
+
+    if fill == 0:
+        fill = None  # if you just want the outline of the object
 
     for x, y, frame in zip(path[0], path[1], range(frames)):
         # creates a rectangle at the current position
@@ -101,7 +98,7 @@ def apply_object_to_path(
             (x - object_radius, int(y + object_radius)),
             (x + object_radius, int(y - object_radius)),
             (128, 128, 128),
-            mode  # fill the rectangle
+            fill  # fill the rectangle
         )
 
     return canvas

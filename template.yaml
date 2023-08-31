@@ -1,0 +1,8 @@
+save_dir:
+ref_save_dir:
+height: 180
+width: 240
+frames: 600
+fps: 120
+col_width: 20
+object_radius: 25
